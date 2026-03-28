@@ -6,13 +6,13 @@
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive_Data-3F4F75)
 ![Cryptography](https://img.shields.io/badge/Security-X.509_Parsing-green)
 
-## 📌 Problem Statement
+## Problem Statement
 Modern financial institutions rely on TLS and RSA/ECC encryption to secure data. However, the impending threat of quantum computing (Shor's Algorithm) renders current cryptographic standards vulnerable ("Harvest Now, Decrypt Later"). Organizations currently lack visibility into their cryptographic blast radius and post-quantum readiness.
 
-## 💡 Our Solution
+## Our Solution
 An agentless, multi-threaded DevSecOps scanning engine that maps an organization's cryptographic attack surface. It calculates a proprietary **Quantum Vulnerability Index (QVI)** for every asset and provides an interactive dashboard for executive visibility.
 
-### 🚀 Key Features
+### Key Features
 * **Multi-Threaded Discovery:** Concurrently scans domains, APIs, and `/24` CIDR blocks.
 * **Deep Crypto Analysis:** Extracts X.509 certificates, ALPN (HTTP/2), and cipher suites using raw socket connections.
 * **QVI Scoring Engine:** Algorithmically grades assets (Tier-1 Elite to Critical Risk) based on NIST post-quantum recommendations (e.g., Kyber/ML-KEM readiness).
@@ -21,7 +21,7 @@ An agentless, multi-threaded DevSecOps scanning engine that maps an organization
 
 ---
 
-## 🏗️ Architecture (Two-Tier)
+## Architecture (Two-Tier)
 
 **Tier 1: Presentation Layer**
 * **Streamlit UI:** Hosts the Executive Dashboard, Deep Analysis Scanner, and CBOM Export modules.
@@ -40,4 +40,13 @@ An agentless, multi-threaded DevSecOps scanning engine that maps an organization
    ```bash
    git clone [https://github.com/sagar-16rs/QUANTUM-SCANNER.git]
    cd quantum-scanner
+   ```
+
+2. **Install the required dependencies:**
+   ```bash
+   pip install streamlit pandas plotly cryptography
+   ```
+3. **Launch the Enterprise Dashboard:**
+   ```bash
+   python -m streamlit run app.py
    ```
